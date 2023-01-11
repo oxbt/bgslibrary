@@ -25,19 +25,19 @@ cv::Mat QImage2Mat(QImage const& src) {
 
 QString base64_encode(const QString string) {
   QByteArray ba;
-  ba.append(string);
+  ba.append(string.toLatin1());
   return ba.toBase64();
 }
 
 QString base64_decode(const QString string) {
   QByteArray ba;
-  ba.append(string);
+  ba.append(string.toLatin1());
   return QByteArray::fromBase64(ba);
 }
 
 QString md5_encode(const QString string) {
   QByteArray ba;
-  ba.append(string);
+  ba.append(string.toLatin1());
   return QString(QCryptographicHash::hash((ba), QCryptographicHash::Md5).toHex());
 }
 

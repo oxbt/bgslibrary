@@ -36,13 +36,11 @@ CONFIG += sdk_no_version_check # supress OS warning for 10.14
 # For Windows x64 + Visual Studio 2015 + OpenCV 4.1.1
 win32 {
   message("Building for Windows")
-  INCLUDEPATH += E:/OpenCV/opencv-4.1.1/build/include
-  release {
-    LIBS += -LE:/OpenCV/opencv-4.1.1/build/x64/vc14/lib -lopencv_world411
-  }
-  debug {
-    LIBS += -LE:/OpenCV/opencv-4.1.1/build/x64/vc14/lib -lopencv_world411d
-  }
+
+  LIBS += -LD:/dev/opencv470_mingw/x64/mingw/lib/ -llibopencv_world470.dll
+
+  INCLUDEPATH += D:/dev/opencv470_mingw/include
+  DEPENDPATH += D:/dev/opencv470_mingw/include
 }
 
 # For Linux or MacOS
