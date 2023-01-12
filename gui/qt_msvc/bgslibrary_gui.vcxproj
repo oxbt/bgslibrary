@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{294E5877-014B-3272-A317-42DFB3EFBDCF}</ProjectGuid>
+    <RootNamespace>bgslibrary_gui</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22000.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>bgslibrary_gui</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>bgslibrary_gui</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bgslibrary_gui</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bgslibrary_gui</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\..\dev\opencv470\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;release;.;/include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\dev\opencv470\lib\opencv_world470.lib;$(QTDIR)\lib\Qt6Widgets.lib;$(QTDIR)\lib\Qt6Gui.lib;$(QTDIR)\lib\Qt6Core.lib;$(QTDIR)\lib\Qt6EntryPoint.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;D:\dev\opencv470\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\bgslibrary_gui.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\..\dev\opencv470\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;debug;.;/include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\dev\opencv470\lib\opencv_world470.lib;$(QTDIR)\lib\Qt6Widgetsd.lib;$(QTDIR)\lib\Qt6Guid.lib;$(QTDIR)\lib\Qt6Cored.lib;$(QTDIR)\lib\Qt6EntryPointd.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;D:\dev\opencv470\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/DEBUG "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\bgslibrary_gui.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\algorithms\AdaptiveBackgroundLearning.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\AdaptiveMedianBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\AdaptiveSelectiveBackgroundLearning.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModel.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModelFuzzyGauss.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModelFuzzySom.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModelGauss.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModelMog.cpp" />
+    <ClCompile Include="..\..\src\algorithms\lb\BGModelSom.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLBSP.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLBSP_.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLOBSTER.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\BackgroundSubtractorPAWCS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\BackgroundSubtractorSuBSENSE.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer\BlobExtraction.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer\BlobResult.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer\CMultiLayerBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\CodeBook.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPAdaptiveMedian.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPEigenbackground.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPGrimsonGMM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPMean.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPPratiMediod.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPTexture.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPWrenGA.cpp" />
+    <ClCompile Include="..\..\src\algorithms\DPZivkovicAGMM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\Eigenbackground.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\Error.cpp" />
+    <ClCompile Include="..\..\src\tools\ForegroundMaskAnalysis.cpp" />
+    <ClCompile Include="..\..\src\algorithms\FrameDifference.cpp" />
+    <ClCompile Include="..\..\src\algorithms\FuzzyChoquetIntegral.cpp" />
+    <ClCompile Include="..\..\src\algorithms\FuzzySugenoIntegral.cpp" />
+    <ClCompile Include="..\..\src\tools\FuzzyUtils.cpp" />
+    <ClCompile Include="..\..\src\algorithms\GMG.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\GrimsonGMM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\IMBS\IMBS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\Image.cpp" />
+    <ClCompile Include="..\..\src\algorithms\IndependentMultimodal.cpp" />
+    <ClCompile Include="..\..\src\algorithms\KDE.cpp" />
+    <ClCompile Include="..\..\src\algorithms\KNN.cpp" />
+    <ClCompile Include="..\..\src\algorithms\KDE\KernelTable.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBAdaptiveSOM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBFuzzyAdaptiveSOM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBFuzzyGaussian.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBMixtureOfGaussians.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\LBSP.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSP\LBSP_.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBSimpleGaussian.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LOBSTER.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer\LocalBinaryPattern.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\MEDefs.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\MEHistogram.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\MEImage.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2F\MRF.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\MeanBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MixtureOfGaussianV1.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MixtureOfGaussianV2.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\MotionDetection.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiCue.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer.cpp" />
+    <ClCompile Include="..\..\src\algorithms\_template_\MyBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\KDE\NPBGSubtractor.cpp" />
+    <ClCompile Include="..\..\src\algorithms\KDE\NPBGmodel.cpp" />
+    <ClCompile Include="..\..\src\algorithms\PAWCS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\PBAS\PBAS.cpp" />
+    <ClCompile Include="..\..\src\tools\PerformanceUtils.cpp" />
+    <ClCompile Include="..\..\src\algorithms\PixelBasedAdaptiveSegmenter.cpp" />
+    <ClCompile Include="..\..\src\tools\PixelUtils.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\PratiMediodBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\SigmaDelta.cpp" />
+    <ClCompile Include="..\..\src\algorithms\StaticFrameDifference.cpp" />
+    <ClCompile Include="..\..\src\algorithms\SuBSENSE.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2F\T2FGMM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2FGMM_UM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2FGMM_UV.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2F\T2FMRF.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2FMRF_UM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\T2FMRF_UV.cpp" />
+    <ClCompile Include="..\..\src\algorithms\VuMeter\TBackground.cpp" />
+    <ClCompile Include="..\..\src\algorithms\VuMeter\TBackgroundVuMeter.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\TextureBGS.cpp" />
+    <ClCompile Include="..\..\src\algorithms\TwoPoints.cpp" />
+    <ClCompile Include="..\..\src\algorithms\ViBe.cpp" />
+    <ClCompile Include="..\..\src\algorithms\VuMeter.cpp" />
+    <ClCompile Include="..\..\src\algorithms\WeightedMovingMean.cpp" />
+    <ClCompile Include="..\..\src\algorithms\WeightedMovingVariance.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\WrenGA.cpp" />
+    <ClCompile Include="..\..\src\algorithms\dp\ZivkovicAGMM.cpp" />
+    <ClCompile Include="..\..\src\algorithms\algorithms.cpp" />
+    <ClCompile Include="bgslibrary_gui.cpp" />
+    <ClCompile Include="..\..\src\algorithms\MultiLayer\blob.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\graph.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="..\..\src\algorithms\LBP_MRF\maxflow.cpp" />
+    <ClCompile Include="qt_utils.cpp" />
+    <ClCompile Include="..\..\src\algorithms\SigmaDelta\sdLaMa091.cpp" />
+    <ClCompile Include="texteditor.cpp" />
+    <ClCompile Include="..\..\src\algorithms\TwoPoints\two_points.cpp" />
+    <ClCompile Include="..\..\src\algorithms\ViBe\vibe-background-sequential.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\algorithms\AdaptiveBackgroundLearning.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\AdaptiveMedianBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\AdaptiveSelectiveBackgroundLearning.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModel.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModelFuzzyGauss.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModelFuzzySom.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModelGauss.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModelMog.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\BGModelSom.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\BGS.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\BackgroundSubtractionAPI.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLBSP.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLBSP_.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\BackgroundSubtractorLOBSTER.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\BackgroundSubtractorPAWCS.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\BackgroundSubtractorSuBSENSE.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\Bgs.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\BgsParams.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\BlobExtraction.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\BlobLibraryConfiguration.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\BlobResult.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\CMultiLayerBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\CodeBook.h" />
+    <ClInclude Include="..\..\src\algorithms\DPAdaptiveMedian.h" />
+    <ClInclude Include="..\..\src\algorithms\DPEigenbackground.h" />
+    <ClInclude Include="..\..\src\algorithms\DPGrimsonGMM.h" />
+    <ClInclude Include="..\..\src\algorithms\DPMean.h" />
+    <ClInclude Include="..\..\src\algorithms\DPPratiMediod.h" />
+    <ClInclude Include="..\..\src\algorithms\DPTexture.h" />
+    <ClInclude Include="..\..\src\algorithms\DPWrenGA.h" />
+    <ClInclude Include="..\..\src\algorithms\DPZivkovicAGMM.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\DistanceUtils.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\Eigenbackground.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\Error.h" />
+    <ClInclude Include="..\..\src\tools\ForegroundMaskAnalysis.h" />
+    <ClInclude Include="..\..\src\algorithms\FrameDifference.h" />
+    <ClInclude Include="..\..\src\algorithms\FuzzyChoquetIntegral.h" />
+    <ClInclude Include="..\..\src\algorithms\FuzzySugenoIntegral.h" />
+    <ClInclude Include="..\..\src\tools\FuzzyUtils.h" />
+    <ClInclude Include="..\..\src\algorithms\GMG.h" />
+    <ClInclude Include="..\..\src\utils\GenericKeys.h" />
+    <ClInclude Include="..\..\src\utils\GenericMacros.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\GrimsonGMM.h" />
+    <ClInclude Include="..\..\src\algorithms\IBGS.h" />
+    <ClInclude Include="..\..\src\utils\ILoadSaveConfig.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\Image.h" />
+    <ClInclude Include="..\..\src\algorithms\IndependentMultimodal.h" />
+    <ClInclude Include="..\..\src\algorithms\KDE.h" />
+    <ClInclude Include="..\..\src\algorithms\KNN.h" />
+    <ClInclude Include="..\..\src\algorithms\KDE\KernelTable.h" />
+    <ClInclude Include="..\..\src\algorithms\LBAdaptiveSOM.h" />
+    <ClInclude Include="..\..\src\algorithms\LBFuzzyAdaptiveSOM.h" />
+    <ClInclude Include="..\..\src\algorithms\LBFuzzyGaussian.h" />
+    <ClInclude Include="..\..\src\algorithms\LBMixtureOfGaussians.h" />
+    <ClInclude Include="..\..\src\algorithms\LBP_MRF.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\LBSP.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\LBSP_.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSimpleGaussian.h" />
+    <ClInclude Include="..\..\src\algorithms\LOBSTER.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\LocalBinaryPattern.h" />
+    <ClInclude Include="..\..\src\algorithms\T2F\MRF.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\MeanBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\MixtureOfGaussianV1.h" />
+    <ClInclude Include="..\..\src\algorithms\MixtureOfGaussianV2.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiCue.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer.h" />
+    <ClInclude Include="..\..\src\algorithms\_template_\MyBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\KDE\NPBGSubtractor.h" />
+    <ClInclude Include="..\..\src\algorithms\KDE\NPBGmodel.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\OpenCvDataConversion.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\OpenCvLegacyIncludes.h" />
+    <ClInclude Include="..\..\src\algorithms\PAWCS.h" />
+    <ClInclude Include="..\..\src\algorithms\PBAS\PBAS.h" />
+    <ClInclude Include="..\..\src\tools\PerformanceUtils.h" />
+    <ClInclude Include="..\..\src\algorithms\PixelBasedAdaptiveSegmenter.h" />
+    <ClInclude Include="..\..\src\tools\PixelUtils.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\PratiMediodBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\LBSP\RandUtils.h" />
+    <ClInclude Include="..\..\src\algorithms\SigmaDelta.h" />
+    <ClInclude Include="..\..\src\algorithms\StaticFrameDifference.h" />
+    <ClInclude Include="..\..\src\algorithms\SuBSENSE.h" />
+    <ClInclude Include="..\..\src\algorithms\T2F\T2FGMM.h" />
+    <ClInclude Include="..\..\src\algorithms\T2FGMM_UM.h" />
+    <ClInclude Include="..\..\src\algorithms\T2FGMM_UV.h" />
+    <ClInclude Include="..\..\src\algorithms\T2F\T2FMRF.h" />
+    <ClInclude Include="..\..\src\algorithms\T2FMRF_UM.h" />
+    <ClInclude Include="..\..\src\algorithms\T2FMRF_UV.h" />
+    <ClInclude Include="..\..\src\algorithms\VuMeter\TBackground.h" />
+    <ClInclude Include="..\..\src\algorithms\VuMeter\TBackgroundVuMeter.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\TextureBGS.h" />
+    <ClInclude Include="..\..\src\algorithms\TwoPoints.h" />
+    <ClInclude Include="..\..\src\algorithms\lb\Types.h" />
+    <ClInclude Include="..\..\src\algorithms\ViBe.h" />
+    <ClInclude Include="..\..\src\algorithms\VuMeter.h" />
+    <ClInclude Include="..\..\src\algorithms\WeightedMovingMean.h" />
+    <ClInclude Include="..\..\src\algorithms\WeightedMovingVariance.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\WrenGA.h" />
+    <ClInclude Include="..\..\src\algorithms\dp\ZivkovicAGMM.h" />
+    <ClInclude Include="..\..\src\algorithms\algorithms.h" />
+    <ClInclude Include="..\..\src\algorithms\MultiLayer\blob.h" />
+    <ClInclude Include="..\..\src\algorithms\LBP_MRF\block.h" />
+    <ClInclude Include="..\..\src\algorithms\LBP_MRF\graph.h" />
+    <CustomBuild Include="mainwindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mainwindow.h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./release/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -ID:/dev/opencv470/include -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC mainwindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_mainwindow.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mainwindow.h;debug\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./debug/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -ID:/dev/opencv470/include -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" mainwindow.h -o debug\moc_mainwindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC mainwindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_mainwindow.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="qt_utils.h" />
+    <ClInclude Include="..\..\src\algorithms\SigmaDelta\sdLaMa091.h" />
+    <CustomBuild Include="texteditor.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">texteditor.h;release\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./release/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -ID:/dev/opencv470/include -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" texteditor.h -o release\moc_texteditor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC texteditor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_texteditor.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">texteditor.h;debug\moc_predefs.h;$(QTDIR)\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./debug/moc_predefs.h -I$(QTDIR)/mkspecs/win32-msvc -I. -ID:/dev/opencv470/include -I$(QTDIR)/include -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" texteditor.h -o debug\moc_texteditor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC texteditor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_texteditor.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\..\src\algorithms\TwoPoints\two_points.h" />
+    <ClInclude Include="..\..\src\algorithms\ViBe\vibe-background-sequential.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_texteditor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_texteditor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_application.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_application.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_mainwindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="mainwindow.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mainwindow.ui;$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe mainwindow.ui -o ui_mainwindow.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC mainwindow.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_mainwindow.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mainwindow.ui;$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe mainwindow.ui -o ui_mainwindow.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC mainwindow.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_mainwindow.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="application.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">application.qrc;$(QTDIR)\bin\rcc.exe;figs\new.png;figs\save.png;figs\open.png;figs\copy.png;figs\paste.png;figs\cut.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\rcc.exe -name application --no-zstd application.qrc -o release\qrc_application.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC application.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qrc_application.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">application.qrc;$(QTDIR)\bin\rcc.exe;figs\new.png;figs\save.png;figs\open.png;figs\copy.png;figs\paste.png;figs\cut.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\rcc.exe -name application --no-zstd application.qrc -o debug\qrc_application.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC application.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qrc_application.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="figs\copy.png" />
+    <None Include="figs\cut.png" />
+    <None Include="figs\new.png" />
+    <None Include="figs\open.png" />
+    <None Include="figs\paste.png" />
+    <None Include="figs\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\algorithms\LBSP\LBSP_16bits_dbcross_1ch.i" />
+    <None Include="..\..\src\algorithms\LBSP\LBSP_16bits_dbcross_3ch1t.i" />
+    <None Include="..\..\src\algorithms\LBSP\LBSP_16bits_dbcross_3ch3t.i" />
+    <None Include="..\..\src\algorithms\LBSP\LBSP_16bits_dbcross_s3ch.i" />
+    <None Include="..\..\src\algorithms\ViBe\LICENSE" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_x64="6.4.2_msvc2019_64" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
