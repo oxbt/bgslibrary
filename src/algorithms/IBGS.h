@@ -10,13 +10,6 @@
 
 #include <opencv2/opencv.hpp>
 
-// opencv legacy includes
-#include <opencv2/imgproc/types_c.h>
-#include <opencv2/imgproc/imgproc_c.h>
-#ifndef MEX_COMPILE_FLAG
-#include <opencv2/highgui/highgui_c.h>
-#endif
-
 #include "../utils/ILoadSaveConfig.h"
 
 #if !defined(bgs_register)

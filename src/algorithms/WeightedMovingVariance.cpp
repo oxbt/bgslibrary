@@ -77,7 +77,7 @@ void WeightedMovingVariance::process(const cv::Mat &img_input, cv::Mat &img_outp
   img_sqrt.copyTo(img_foreground);
 
   if (img_foreground.channels() == 3)
-    cv::cvtColor(img_foreground, img_foreground, CV_BGR2GRAY);
+    cv::cvtColor(img_foreground, img_foreground, cv::COLOR_BGR2GRAY);
 
   if (enableThreshold)
     cv::threshold(img_foreground, img_foreground, threshold, 255, cv::THRESH_BINARY);

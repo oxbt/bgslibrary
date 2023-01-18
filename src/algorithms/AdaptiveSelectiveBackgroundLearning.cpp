@@ -21,7 +21,7 @@ void AdaptiveSelectiveBackgroundLearning::process(const cv::Mat &img_input_, cv:
 
   cv::Mat img_input;
   if (img_input_.channels() == 3)
-    cv::cvtColor(img_input_, img_input, CV_BGR2GRAY);
+    cv::cvtColor(img_input_, img_input, cv::COLOR_BGR2GRAY);
   else
     img_input_.copyTo(img_input);
 

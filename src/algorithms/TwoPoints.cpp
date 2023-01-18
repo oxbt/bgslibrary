@@ -29,7 +29,7 @@ void TwoPoints::process(const cv::Mat &img_input, cv::Mat &img_output, cv::Mat &
   cv::Mat img_input_grayscale;
 
   // Convert input image to a grayscale image
-  cvtColor(img_input, img_input_grayscale, CV_BGR2GRAY);
+  cvtColor(img_input, img_input_grayscale, cv::COLOR_BGR2GRAY);
 
   if (firstTime) {
     // Create a buffer for the output image.
