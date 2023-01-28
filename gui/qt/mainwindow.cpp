@@ -131,8 +131,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
   ui->setupUi(this);
   //QDir applicationPath(QCoreApplication::applicationDirPath());
-  fileName = QDir(".").filePath("dataset/video.avi");
   //fileName = applicationPath.absolutePath() + "dataset";
+  //fileName = QDir(".").filePath("dataset/video.avi");
+  fileName = "d:/git/bgslibrary/dataset/video.avi";
   ui->lineEdit_inputdata->setText(fileName);
   //fileName = ui->lineEdit_inputdata->text();
   timer = new QTimer(this); connect(timer, SIGNAL(timeout()), this, SLOT(startCapture()));
